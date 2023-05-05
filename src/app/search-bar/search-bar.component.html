@@ -1,0 +1,24 @@
+<div class="outer-container">
+
+  <div class="search-bar-container">
+
+    <h1 routerLink="/" style="color: #c2185b; margin-left: 20px;">VIDEO GAME DB</h1>
+    <div class="search-bar-inner-container">
+
+      <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+        <mat-form-field appearance="fill" class="form-div">
+
+          <mat-label>Input</mat-label>
+          <input matInput name="title" ngModel placeholder="GTA V..." />
+
+          <button mat-raised-button class="mat-button" type="submit" color="primary">Search</button>
+        </mat-form-field>
+      </form>
+
+
+
+      <div class="example-button-container">
+      </div>
+    </div>
+  </div>
+</div>

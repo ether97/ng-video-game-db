@@ -1,0 +1,27 @@
+<div class="home-container">
+
+  <div class="home-filter">
+    <mat-form-field>
+      <mat-label>Sort</mat-label>
+      <mat-select panelClass="sort-select" [(ngModel)]="sort">
+        <mat-option value="name">Name</mat-option>
+        <mat-option value="released">Released</mat-option>
+        <mat-option value="-added">Added</mat-option>
+        <mat-option value="-created">Created</mat-option>
+        <mat-option value="-updated">Updated</mat-option>
+        <mat-option value="-rating">Rating</mat-option>
+        <mat-option value="metacritic">Metacritic</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <mat-grid-list cols="4" rowHeight="1.5:1.5" gutterSize="10px">
+    <mat-grid-tile *ngFor="let game of games; index as i">
+      <div class="game">
+        <img src={{game.background_image}} class="picture" />
+      </div>
+    </mat-grid-tile>
+
+
+  </mat-grid-list>
+</div>
